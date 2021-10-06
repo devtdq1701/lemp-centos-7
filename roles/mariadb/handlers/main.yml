@@ -1,0 +1,15 @@
+---
+- name: start mariadb
+  service:
+    name: mariadb
+    state: started
+
+- name: restart mariadb
+  service:
+    name: mariadb
+    state: restarted
+
+- name: reload mariadb
+  service:
+    name: mariadb
+    state: reloaded

@@ -1,0 +1,15 @@
+---
+- name: start php-fpm
+  service:
+    name: php-fpm
+    state: started
+
+- name: restart php-fpm
+  service:
+    name: php-fpm
+    state: restarted
+
+- name: reload php-fpm
+  service:
+    name: php-fpm
+    state: reloaded

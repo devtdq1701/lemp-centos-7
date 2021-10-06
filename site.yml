@@ -1,0 +1,9 @@
+---
+- hosts: centos
+  become: yes
+  user: root
+  roles:
+    - nginx
+    - mariadb
+    - php
+    - firewalld

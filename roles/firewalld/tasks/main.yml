@@ -1,0 +1,15 @@
+---
+  - name: Enable firewalld
+    service:
+      name: firewalld
+      state: started
+      enabled: true
+  - name: Ensure HTTP and HTTPS can pass the firewall
+    firewalld:
+      service: '{{item}}'
+      state: enabled
+      permanent: yes
+      immediate: yes
+    with_items:
+    - http
+    - https

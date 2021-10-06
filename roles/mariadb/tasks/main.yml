@@ -1,0 +1,11 @@
+---
+- name: Install mariadb-server
+  yum:
+    name: mariadb-server
+    state: latest
+
+- name: Install mariadb
+  yum:
+    name: mariadb
+    state: latest
+  notify: restart mariadb
